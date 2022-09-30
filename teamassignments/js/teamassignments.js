@@ -1,7 +1,7 @@
 const links = [
     {
       label: "Week 3 Team Assignment",
-      url: "teamassignments/week3.html"
+      url: "teamassignments/week3/index-start.html"
     },
   ]
 
