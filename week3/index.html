@@ -46,7 +46,10 @@
     <ul>
         <li>Mouse Events: click, mousedown, mouseup, doubleclick, mouseover, mouseout</li>
         <li>Keyboard Events: keydown, keyup, keypress</li>
-        <li>Touch Events (on phones): </li>
+        <li>Touch Events (on phones): touchstart, touchend, touchenter, touchleave, touchcancel</li>
     </ul>
+    <p>Using click is sometimes still better on mobile devices because there is a slight delay whereas touch events are instantaneous</p>
+    <p>You can use preventDefault() to change the default behavior but you have to be careful because users will expect certain things on a web page.</p>
+    <p>To review/practice: Propogation and Delegation</p>
 </body>
 </html>
