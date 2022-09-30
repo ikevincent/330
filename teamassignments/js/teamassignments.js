@@ -6,5 +6,5 @@ const links = [
   ]
 
 links.forEach(linkObject => {
-    document.getElementById("toc").innerHTML += `<li><a href='${linkObject.url}'>${linkObject.label}</a></li>`
+    document.getElementById("teamtoc").innerHTML += `<li><a href='${linkObject.url}'>${linkObject.label}</a></li>`
 })
