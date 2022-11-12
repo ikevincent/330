@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Notes</title>
+</head>
+
+<body>
+    <h1>Week 9 Readings</h1>
+    <h2>Chapter 9: The Window Object</h2>
+    <p>The window object is the global object of a browser environment. The Browser Object Model (BOM) are the
+        properties and models that contain info about the browser and computer screen.</p>
+    <p>Any global variable created is property of the window object.</p>
+    <p>window.alert will pause execution and display a message in a dialogue box.</p>
+    <p>window.confirm will pause and gives the option of hitting 'ok' (true) or 'cancel' (false).</p>
+    <p>There are methods to get information about the type of browser, the host of the site, or other bits of
+        information about the browser.</p>
+    <p>You can access previously visited pages in the browser with window.history.go() which can navigate forward or
+        backwards any number of pages.</p>
+    <p>Each window object contains a document object.</p>
+    <p>You can create cookies within the document object by typing something like this: document.cookie =
+        'name=Superman';</p>
+    <p>You can view current cookies by typing document.cookie:</p>
+    <p>You can add 'secure' when creating a cookie to ensure it's only transmitted via a HTTPS network.</p>
+    <p>Using timing functions can be used</p>
+    <h2>Chapter 14: HTML5 APIs</h2>
+    <p>The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the
+        browser. They’re also private to a page, so are not intended to be used by an external service – their sole
+        purpose is to be used by a JavaScript program. This means they’re perfect for adding data that can be used as a
+        hook that the program utilizes to access information about a particular element on the page.</p>
+    <p>The HTML5 specification contains a number of APIs that help to gain access to hardware, such as cameras,
+        batteries, geolocation, and the graphics card.</p>
+    <ul>
+        <li>Webstorage - used for storing information locally on the client's devices for easy access during sessions.</li>
+        <li>Geolocation - Find the user's exact location.</li>
+        <li>Web Workers - Adds concurency support to JavaScript.</li>
+        <li>Websockets - Allow two-way communication with a server (Push Messaging).</li>
+        <li>Notifications - Show messages using the system's notifications after requesting access.</li>
+        <li>Multimedia - Easily insert audio and video clips into the html.</li>
+    </ul>
+</body>
+
+</html>

@@ -11,6 +11,10 @@ const links = [
       label: "Week 5 Team Assignment",
       url: "week5/index.html"
     },
+    {
+      label: "Week 9 Team Assignment",
+      url: "week9/index-START.html"
+    }
   ]
 
 links.forEach(linkObject => {
