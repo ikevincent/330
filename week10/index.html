@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Notes</title>
+</head>
+
+<body>
+    <h1>Week 10 Readings</h1>
+    <h2>MDN: Validating Forms</h2>
+    <p>Form validation is the process used to ensure that data entered into forms is in the format required. There are
+        two types of validation: Client-side and server-side. Client-side is done in the browser while server-side is of
+        course done in the server.</p>
+    <p>There are three main reasons to validate data entered into forms:</p>
+    <ul>
+        <li>We want the right data in the right form.</li>
+        <li>We want to protect the user's data.</li>
+        <li>We want to protect our website. (Never trust data passed to your server from the client.)</li>
+    </ul>
+    <p>There are built-in form validation that can be added to form attributes. Required, minlength, maxlength, min,
+        max, type, and pattern.</p>
+    <ul>
+        <li>required: specifies whether the field needs to be filled in before it can be submitted.</li>
+        <li>minlength and maxlength: specifies the minimum and maximum length of string data.</li>
+        <li>min and max: specifies the minimum and maximum length of numbers.</li>
+        <li>type: specifies what type the data should be. (Text, email, number, etc.)</li>
+        <li>pattern: specifies a regular expression that defines the pattern expected in a field.</li>
+    </ul>
+    <p>Validating with JavaScript</p>
+    <p>You can use the Constraint Validation API</p>
+    <ul>
+        <li>HTMLButtonElement (represents a <button> element)</li>
+        <li>HTMLFieldSetElement (represents a <fieldset> element)</li>
+        <li>HTMLInputElement (represents an <input> element)</li>
+        <li>HTMLOutputElement (represents an <output> element)</li>
+        <li>HTMLSelectElement (represents a <select> element)</li>
+        <li>HTMLTextAreaElement (represents a <textarea> element)</li>
+    </ul>
+    <h2>MDN: Using Fetch</h2>
+    <p>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the protocol, 
+        such as requests and responses. It also provides a global fetch() method that provides an easy, 
+        logical way to fetch resources asynchronously across the network.</p>
+    <p>Adding this example of uploading a file for later use:</p>
+    <p>const formData = new FormData();
+        const fileField = document.querySelector('input[type="file"]');
+        
+        formData.append('username', 'abc123');
+        formData.append('avatar', fileField.files[0]);
+        
+        fetch('https://example.com/profile/avatar', {
+          method: 'PUT',
+          body: formData
+        })
+          .then((response) => response.json())
+          .then((result) => {
+            console.log('Success:', result);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });</p>
+    <p>And multiple files:</p>
+    <p>const formData = new FormData();
+        const photos = document.querySelector('input[type="file"][multiple]');
+        
+        formData.append('title', 'My Vegas Vacation');
+        let i = 0;
+        for (const photo of photos.files) {
+          formData.append(`photos_${i}`, photo);
+          i++;
+        }
+        
+        fetch('https://example.com/posts', {
+          method: 'POST',
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((result) => {
+            console.log('Success:', result);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });</p>
+    <p>And checking that the fetch was successful:</p>
+    <p>fetch('flowers.jpg')
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not OK');
+          }
+          return response.blob();
+        })</p>
+    <p>I wanted to save those bits of code to remember them in case I need them the final few weeks.</p>
+    <p>Outside of these parts of fetch I think I'm getting the hang of it.</p>
+</body>
+
+</html>
