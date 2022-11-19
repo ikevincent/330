@@ -44,53 +44,6 @@
         such as requests and responses. It also provides a global fetch() method that provides an easy, 
         logical way to fetch resources asynchronously across the network.</p>
     <p>Adding this example of uploading a file for later use:</p>
-    <p>const formData = new FormData();
-        const fileField = document.querySelector('input[type="file"]');
-        
-        formData.append('username', 'abc123');
-        formData.append('avatar', fileField.files[0]);
-        
-        fetch('https://example.com/profile/avatar', {
-          method: 'PUT',
-          body: formData
-        })
-          .then((response) => response.json())
-          .then((result) => {
-            console.log('Success:', result);
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-          });</p>
-    <p>And multiple files:</p>
-    <p>const formData = new FormData();
-        const photos = document.querySelector('input[type="file"][multiple]');
-        
-        formData.append('title', 'My Vegas Vacation');
-        let i = 0;
-        for (const photo of photos.files) {
-          formData.append(`photos_${i}`, photo);
-          i++;
-        }
-        
-        fetch('https://example.com/posts', {
-          method: 'POST',
-          body: formData,
-        })
-          .then((response) => response.json())
-          .then((result) => {
-            console.log('Success:', result);
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-          });</p>
-    <p>And checking that the fetch was successful:</p>
-    <p>fetch('flowers.jpg')
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not OK');
-          }
-          return response.blob();
-        })</p>
     <p>I wanted to save those bits of code to remember them in case I need them the final few weeks.</p>
     <p>Outside of these parts of fetch I think I'm getting the hang of it.</p>
 </body>
