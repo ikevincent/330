@@ -1,4 +1,8 @@
 const links = [{
+    label: "Block One Challenge - To Do",
+    url: "blockOne/todo.html"
+  },
+  {
     label: "Team Assignments",
     url: "teamassignments/index.html"
   },
