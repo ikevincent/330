@@ -1,0 +1,90 @@
+body {
+    color: navy;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+    color: #05386B;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    padding: 10px 20px;
+
+}
+
+.container {
+    max-width: 450px;
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 1px solid navy;
+}
+
+input {
+    border: none;
+    display: block;
+    width: 90%;
+    line-height: 1.5;
+    border-bottom: 1px solid #F0EFEA;
+    outline: 0;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    line-height: 1;
+    font-size: 85px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    color: black;
+    font-weight: 400;
+    border-bottom: 1px solid #cfcbcc;
+    line-height: 1.5;
+    padding: 8px 0;
+}
+
+ul li:before {
+    content: "\25A1";
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+ul li:hover {
+    cursor: pointer;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+.button {
+    text-align: center;
+}
+
+.checked {
+    color: green;
+}
+
+.checked:before {
+    content: "\2713";
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.checked:hover {
+    text-decoration: none;
+}
+
+.checked:hover:after {
+    content: " (Click to delete)";
+    color: red;
+    text-align: right;
+}
