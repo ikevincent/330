@@ -3,10 +3,6 @@ import {
     Errors,
     makeRequest
 } from './authHelpers.js';
-// makeRequest('login', 'POST', {
-//   password: 'user1',
-//   email: 'user1@email.com'
-// });
 
 const myErrors = new Errors('errors');
 const myAuth = new Auth(myErrors);
@@ -18,7 +14,6 @@ loginForm.querySelector('button').addEventListener('click', () => {
 async function getPosts() {
     try {
         const data = await makeRequest('posts', 'GET', null, myAuth.token);
-        // make sure the element is shown
         document.getElementById('content').classList.remove('hidden');
         console.log(data);
         var ul = document.getElementById('list');
@@ -30,7 +25,6 @@ async function getPosts() {
         }
         myErrors.clearError();
     } catch (error) {
-        // if there were any errors display them
         myErrors.handleError(error);
     }
 }
