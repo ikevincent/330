@@ -51,7 +51,7 @@ async function createPost() {
         }
     } else {
         myErrors.displayError({
-            message: 'Title and Content are required'
+            message: 'All fields are required!'
         });
     }
 }

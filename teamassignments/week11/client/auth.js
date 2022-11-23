@@ -48,31 +48,11 @@ export default class Auth {
             console.log(error);
         }
     }
-    async updateUser() {
 
-        this.user.age = 40;
-        try {
-            const result = await makeRequest(
-                'users/' + this.user.id,
-                'PUT',
-                this.user,
-                this.jwtToken
-            );
-            console.log('Update user:', result);
-        } catch (error) {
-            this.errors.handleError(error, showLogin);
-        }
-    }
-
-    set token(value) {
-    }
+    set token(value) {}
     get token() {
         return this.jwtToken;
     }
-}
-
-function showLogin() {
-    document.getElementById('login').classList.remove('hidden');
 }
 
 function hideLogin() {
