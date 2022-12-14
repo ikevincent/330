@@ -2,6 +2,9 @@ const links = [{
     label: "Block One Challenge - To Do",
     url: "blockOne/todo.html"
   },
+  {label: "Block Two Challenge - Quakes Expansion",
+    url: "blockTwo/index.html"
+  },
   {
     label: "Team Assignments",
     url: "teamassignments/index.html"
